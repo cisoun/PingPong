@@ -48,8 +48,6 @@ namespace PingPong
 				TcpClient client = _server.AcceptTcpClient();
 
 				// Client found.
-				//Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClient));
-				//clientThread.Start(client);
 				Task.Run(() =>
 				{
 					HandleClient(client);
